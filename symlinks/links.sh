@@ -1,0 +1,6 @@
+ln -s "$HOME/.dotfiles/git/.gitconfig" "$HOME/.gitconfig"
+ln -s "$HOME/.dotfiles/shell/bash/.bashrc" "$HOME/.bashrc"
+ln -s "$HOME/.dotfiles/shell/zsh/.zimrc" "$HOME/.zimrc"
+ln -s "$HOME/.dotfiles/shell/zsh/.zlogin" "$HOME/.zlogin"
+ln -s "$HOME/.dotfiles/shell/zsh/.zshenv" "$HOME/.zshenv"
+ln -s "$HOME/.dotfiles/shell/zsh/.zshrc" "$HOME/.zshrc"
