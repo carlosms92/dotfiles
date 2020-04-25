@@ -1,0 +1,6 @@
+[user]
+	email = cmartinez@antevenio.com
+[credential]
+	helper = store
+[alias]
+	st = status
