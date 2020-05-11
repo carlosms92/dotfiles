@@ -2,7 +2,7 @@
 #
 # User configuration sourced by interactive shells
 #
-
+export DOTFILES_PATH=$HOME/.dotfiles
 # -----------------
 # Zsh configuration
 # -----------------
@@ -124,32 +124,4 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 setopt PROMPT_SUBST
 
-alias sudo="sudo "
-alias ll="ls -l"
-alias la="ls -la"
-alias cdw="cd $HOME/Antevenio/projects"
-alias gs="git status"
-alias gd="git diff"
-
-alias connect_pre="ssh root@labs-pre-php72.antevenio.local"
-alias connect_test="ssh root@labs-test-php72.antevenio.local"
-alias connect_coobis_prod="ssh coobis@cron-aurora03-php7.antevenio.local"
-
-alias dc_connect_mysql="./dc-frontend-dev.sh exec coobis_mysql mysql -uroot -pdocker"
-
-function docker_list {
-  containers=$(docker ps | awk '{if (NR!=1) print $1 ": " $(NF)}')
-
-  echo "👇 Containers 👇"
-  echo $containers
-}
-
-_reverse_search() {
-  local selected_command=$(fc -rl 1 | awk '{$1="";print substr($0,2)}' | fzf)
-  LBUFFER=$selected_command
-}
-
-zle -N _reverse_search
-bindkey '^r' _reverse_search
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source $DOTFILES_PATH/shell/init.sh
